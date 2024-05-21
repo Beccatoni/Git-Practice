@@ -58,4 +58,28 @@ $ git commit --amend
 
 *** 2.Editing Commit History:  ***
 
+ git rebase -i HEAD~4
+Stopped at 306cf5e...  chore: Create another file
+You can amend the commit now, with
+
+  git commit --amend
+
+Once you are satisfied with your changes, run
+
+  git rebase --continue
+
+The Gym@DESKTOP-FTJIN5G MINGW64 ~/Git-Practice (main|REBASE 2/4)
+$ git commit --amend
+[detached HEAD 4703736] chore: Create second file
+ Date: Tue May 21 16:28:36 2024 +0200
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test2.md
+
+The Gym@DESKTOP-FTJIN5G MINGW64 ~/Git-Practice (main|REBASE 2/4)
+$ git rebase --continue
+Successfully rebased and updated refs/heads/main.
+
+
+*** 3. Keeping History Tidy - Squashing Commits:   ***
+
 
