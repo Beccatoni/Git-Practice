@@ -82,4 +82,13 @@ Successfully rebased and updated refs/heads/main.
 
 *** 3. Keeping History Tidy - Squashing Commits:   ***
 
+ git rebase -i HEAD~5
+[detached HEAD fee74a8] Create initial and second file
+ Date: Tue May 21 16:28:35 2024 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)     
+ create mode 100644 test1.md
+ create mode 100644 test2.md
+Successfully rebased and updated refs/heads/main.
 
+
+***  4. Splitting a Commit:    ***
