@@ -92,3 +92,50 @@ Successfully rebased and updated refs/heads/main.
 
 
 ***  4. Splitting a Commit:    ***
+git rebase -i HEAD~4
+Stopped at e280dac...  chore: Create third and fourth files
+You can amend the commit now, with
+
+  git commit --amend
+
+Once you are satisfied with your changes, run
+
+  git rebase --continue
+
+The Gym@DESKTOP-FTJIN5G MINGW64 ~/Git-Practice (main|REBASE 1/4)
+$ git commit --amend
+[detached HEAD 129bed2] chore: Create third and fourth files
+ Date: Tue May 21 16:28:41 2024 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+ create mode 100644 test4.md
+
+The Gym@DESKTOP-FTJIN5G MINGW64 ~/Git-Practice (main|REBASE 1/4)
+$ git reset HEAD^
+
+The Gym@DESKTOP-FTJIN5G MINGW64 ~/Git-Practice (main|REBASE 1/4)
+$ git add test3.md
+
+The Gym@DESKTOP-FTJIN5G MINGW64 ~/Git-Practice (main|REBASE 1/4)
+$ git commit -m "create third file"
+[detached HEAD 721cc3e] create third file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+
+The Gym@DESKTOP-FTJIN5G MINGW64 ~/Git-Practice (main|REBASE 1/4)
+$ git  add test4.md
+
+The Gym@DESKTOP-FTJIN5G MINGW64 ~/Git-Practice (main|REBASE 1/4)
+$ git commit -m "create fourth file"
+[detached HEAD ce37560] create fourth file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test4.md
+
+The Gym@DESKTOP-FTJIN5G MINGW64 ~/Git-Practice (main|REBASE 1/4)
+$ git rebase --continue
+Successfully rebased and updated refs/heads/main.
+
+
+*** 5. Advanced Squashing:  ***
+
+
