@@ -138,4 +138,43 @@ Successfully rebased and updated refs/heads/main.
 
 *** 5. Advanced Squashing:  ***
 
+$ git rebase -i HEAD~6
+[detached HEAD 80f762d] Create third and fourth files
+ Date: Tue May 21 17:08:22 2024 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+ create mode 100644 test4.md
+Successfully rebased and updated refs/heads/main.
+
+
+*** 6. Dropping a Commit: ***
+The Gym@DESKTOP-FTJIN5G MINGW64 ~/Git-Practice (main)     
+pick e6d08cd read me 4
+$ touch unwanted.txt
+
+The Gym@DESKTOP-FTJIN5G MINGW64 ~/Git-Practice (main)     
+$ git add unwanted.txt && git commit -m "Unwanted commit" 
+[main 5cdbd03] Unwanted commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 unwanted.txt
+
+The Gym@DESKTOP-FTJIN5G MINGW64 ~/Git-Practice (main)     
+$ git rebase -i HEAD~2
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+
+The Gym@DESKTOP-FTJIN5G MINGW64 ~/Git-Practice (main)     
+$ git add .
+
+The Gym@DESKTOP-FTJIN5G MINGW64 ~/Git-Practice (main)     
+$ git commit -m "read"
+[main aa41cd6] read
+ 1 file changed, 11 insertions(+)
+
+The Gym@DESKTOP-FTJIN5G MINGW64 ~/Git-Practice (main)     
+$ git rebase -i HEAD~3
+Successfully rebased and updated refs/heads/main.
+
+
+
 
