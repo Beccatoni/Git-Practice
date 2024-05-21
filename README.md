@@ -137,6 +137,17 @@ Successfully rebased and updated refs/heads/main.
 
 
 *** 5. Advanced Squashing:  ***
+$ git rebase -i HEAD~6
+[detached HEAD 80f762d] Create third and fourth files
+ Date: Tue May 21 17:08:22 2024 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+ create mode 100644 test4.md
+Successfully rebased and updated refs/heads/main.
+
+
+*** 6. Dropping a Commit: ***
+
 
 $ git rebase -i HEAD~6
 [detached HEAD 80f762d] Create third and fourth files
